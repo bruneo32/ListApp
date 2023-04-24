@@ -8,6 +8,7 @@ import { AppConfig, defaultAppConfig } from 'src/app/models/AppConfig';
 })
 export class ConfigComponent implements OnInit {
 
+  @Input() appVersion: string = "-";
   @Input() config: AppConfig;
   @Output() valueChange = new EventEmitter<AppConfig>();
   @Output() SetTheme_ = new EventEmitter<string>();
