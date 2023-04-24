@@ -76,8 +76,7 @@
 
 <h2>Check for updates</h2>
 <p>Current version: <b style="font-family:monospace;">v{{ appVersion }}</b></p>
-<button mat-raised-button onclick="window.open('https:\/\/github.com\/bruneo32\/ListApp\/releases', '_blank')">Go to
-	Releases</button>
+<a [href]="ReleasesURL" target="_blank">{{ ReleasesURL }}</a>
 
 <br>
 <hr><br>
