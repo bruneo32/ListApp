@@ -1,0 +1,138 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+// theme-default (purple-green)
+// Don't define it
+
+
+// theme-unicorn
+$unicorn-app-primary: mat-palette($mat-blue-grey);
+$unicorn-app-accent: mat-palette($mat-amber, A200, A100, A400);
+$unicorn-app-warn: mat-palette($mat-deep-orange);
+$unicorn-theme: mat-dark-theme($unicorn-app-primary, $unicorn-app-accent, $unicorn-app-warn);
+
+body.theme-unicorn {
+	color-scheme: dark;
+	@include angular-material-theme($unicorn-theme);
+	@include mat-core-theme($unicorn-theme);
+	@include mat-button-theme($unicorn-theme);
+	@include mat-checkbox-theme($unicorn-theme);
+	@include mat-icon-theme($unicorn-theme);
+	@include mat-list-theme($unicorn-theme);
+	@include mat-toolbar-theme($unicorn-theme);
+	@include mat-tooltip-theme($unicorn-theme);
+}
+
+
+// theme-pinkbg
+$pinkbg-app-primary: mat-palette($mat-pink, 700, 500, 900);
+$pinkbg-app-accent: mat-palette($mat-blue-grey, A200, A100, A400);
+$pinkbg-theme: mat-dark-theme($pinkbg-app-primary, $pinkbg-app-accent);
+
+body.theme-pinkbg {
+	color-scheme: dark;
+	@include angular-material-theme($pinkbg-theme);
+	@include mat-core-theme($pinkbg-theme);
+	@include mat-button-theme($pinkbg-theme);
+	@include mat-checkbox-theme($pinkbg-theme);
+	@include mat-icon-theme($pinkbg-theme);
+	@include mat-list-theme($pinkbg-theme);
+	@include mat-toolbar-theme($pinkbg-theme);
+	@include mat-tooltip-theme($pinkbg-theme);
+}
+
+
+// theme-dpamber
+$dpamber-app-primary: mat-palette($mat-deep-purple);
+$dpamber-app-accent: mat-palette($mat-amber, A200, A100, A400);
+$dpamber-theme: mat-light-theme($dpamber-app-primary, $dpamber-app-accent);
+
+body.theme-dpamber {
+	color-scheme: light;
+	@include angular-material-theme($dpamber-theme);
+	@include mat-core-theme($dpamber-theme);
+	@include mat-button-theme($dpamber-theme);
+	@include mat-checkbox-theme($dpamber-theme);
+	@include mat-icon-theme($dpamber-theme);
+	@include mat-list-theme($dpamber-theme);
+	@include mat-toolbar-theme($dpamber-theme);
+	@include mat-tooltip-theme($dpamber-theme);
+}
+
+
+// theme-indigop
+$indigop-app-primary: mat-palette($mat-indigo);
+$indigop-app-accent: mat-palette($mat-pink, A200, A100, A400);
+$indigop-theme: mat-light-theme($indigop-app-primary, $indigop-app-accent);
+
+body.theme-indigop {
+	color-scheme: light;
+	@include angular-material-theme($indigop-theme);
+	@include mat-core-theme($indigop-theme);
+	@include mat-button-theme($indigop-theme);
+	@include mat-checkbox-theme($indigop-theme);
+	@include mat-icon-theme($indigop-theme);
+	@include mat-list-theme($indigop-theme);
+	@include mat-toolbar-theme($indigop-theme);
+	@include mat-tooltip-theme($indigop-theme);
+}
+
+
+// theme-blackpink
+
+$mat-blackpink: (
+	50: #ffffff,
+	100: #77d942,
+	200: #fecdbd,
+	300: #fc9977,
+	400: #fc8259,
+	500: #ff64ff,
+	600: #fa551d,
+	700: #f44205,
+	800: #d63a04,
+	900: #b83204,
+	A100: #ffffff,
+	A200: #77d942,
+	A400: #fc8259,
+	A700: #f44205,
+	contrast: (50: $black-87-opacity,
+		100: $black-87-opacity,
+		200: $black-87-opacity,
+		300: $black-87-opacity,
+		400: $black-87-opacity,
+		500: white,
+		600: white,
+		700: white,
+		800: white,
+		900: white,
+		A100: $black-87-opacity,
+		A200: $black-87-opacity,
+		A400: $black-87-opacity,
+		A700: white,
+	)
+);
+
+$blackpink-app-primary: mat-palette($mat-blackpink);
+$blackpink-app-accent: mat-palette($mat-blackpink, A200, A100, A400);
+$blackpink-theme: mat-light-theme($blackpink-app-primary, $blackpink-app-accent);
+
+body.theme-blackpink {
+	color-scheme: light;
+	@include angular-material-theme($blackpink-theme);
+	@include mat-core-theme($blackpink-theme);
+	@include mat-button-theme($blackpink-theme);
+	@include mat-checkbox-theme($blackpink-theme);
+	@include mat-icon-theme($blackpink-theme);
+	@include mat-list-theme($blackpink-theme);
+	@include mat-toolbar-theme($blackpink-theme);
+	@include mat-tooltip-theme($blackpink-theme);
+}
+
+body.theme-blackpink .mat-toolbar.mat-primary {
+	color: #000;
+}
+
+body.theme-blackpink .mat-app-background,
+body.theme-blackpink.mat-app-background {
+	background: #ffdbff;
+}

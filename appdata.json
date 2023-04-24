@@ -1,0 +1,12 @@
+{
+  "include": "dist/listapp/",
+  "output": "out/listapp.apk",
+  "appinfo": {
+    "package": "com.bruneo32.listapp",
+    "appname": "ListApp",
+    "color": "#303030",
+    "versionCode": 2,
+    "versionName": "1.1",
+    "icon": "src/assets/favicon/favicon.webp"
+  }
+}

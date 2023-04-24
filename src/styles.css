@@ -1,0 +1,40 @@
+@import 'assets/fonts/MaterialIcons.css';
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	overflow: hidden;
+}
+
+* {
+	box-sizing: border-box;
+	max-width: 100%;
+	color: inherit;
+	outline: none;
+	transition: 0.2s;
+	scroll-behavior: smooth;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+p {
+	text-align: justify;
+}
+
+.row-spacer {
+	flex: 1 1 auto;
+}
+
+mat-icon-button {
+	cursor: pointer;
+}
+
+hr {
+	opacity: 0.2;
+}

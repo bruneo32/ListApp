@@ -1,0 +1,34 @@
+.themeSelector {
+	display: block;
+	overflow-y: hidden;
+	overflow-x: auto;
+	white-space: nowrap;
+	height: 96px;
+}
+
+.themeSelector div.theme {
+	cursor: pointer;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	padding: 0;
+
+	box-shadow: 0 0 9px 0 black;
+	border-radius: 16px;
+
+	background: aliceblue;
+	color: black;
+	text-align: center;
+}
+
+.themeSelector div.theme div.upbar {
+	display: block;
+	height: 16px;
+	border-radius: 16px 16px 0 0;
+}
+
+.themeSelector div.theme .mat-pseudo-checkbox::after {
+	color: inherit;
+}

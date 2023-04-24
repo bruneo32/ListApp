@@ -1,0 +1,58 @@
+<mat-toolbar color="primary" id="header">
+  <img src="assets/favicon/favicon96.webp" alt="" *ngIf="!view" />
+  <mat-icon-button (click)="view=''" class="material-icon" aria-hidden="true" matTooltip="Go Back" *ngIf="view"
+    style="margin-left:0; margin-right: 16px;">
+    <mat-icon>arrow_back</mat-icon>
+  </mat-icon-button>
+
+  <span>{{ view || "ListApp" }}</span>
+
+  <span class="row-spacer"></span>
+
+  <mat-icon-button *ngIf="!view" (click)="newList()" class="material-icon" aria-hidden="true"
+    matTooltip="Create new list">
+    <mat-icon>add_box</mat-icon>
+  </mat-icon-button>
+
+  <mat-icon-button *ngIf="view && view!='Configuration'" (click)="newItem()" class="material-icon" aria-hidden="true"
+    matTooltip="Create new item">
+    <mat-icon>add_box</mat-icon>
+  </mat-icon-button>
+
+  <mat-icon-button (click)="changeView((view=='Configuration')?'':'Configuration')" class="material-icon"
+    aria-hidden="true" matTooltip="Configuration">
+    <mat-icon>settings</mat-icon>
+  </mat-icon-button>
+
+</mat-toolbar>
+
+<div id="content">
+
+  <mat-action-list *ngIf="!view">
+    <p *ngIf="!lists || !keys.length" style="padding:16px; font-style:italic; text-align:center;">
+      Nothing here. <br>
+      Touch
+      <mat-icon class="material-icon" style="vertical-align:text-top; font-size:inherit;">add_box</mat-icon> to
+      create a new list.
+    </p>
+    <mat-list-item *ngFor="let li of keys" (click)="changeView(li)" (contextmenu)="remList($event, li)">
+      {{ li }}
+    </mat-list-item>
+  </mat-action-list>
+
+  <mat-selection-list *ngIf="view && view!='Configuration'">
+    <p *ngIf="!lists[view] || !lists[view].length" style="padding:16px; font-style:italic; text-align:center;">
+      Nothing here. <br>
+      Touch
+      <mat-icon class="material-icon" style="vertical-align:text-top; font-size:inherit;">add_box</mat-icon> to
+      create a new item in this list.
+    </p>
+    <mat-list-option *ngFor="let li of lists[view]; let i=index" [value]="li" (contextmenu)="remItem($event, i)">
+      {{ li }}
+    </mat-list-option>
+  </mat-selection-list>
+
+  <app-config *ngIf="view=='Configuration'" [config]="config" (valueChange)="updateConfig($event)"
+    (SetTheme_)="SetTheme($event)">
+  </app-config>
+</div>
