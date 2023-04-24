@@ -10,4 +10,5 @@ Build Angular App
 > npm run build
 
 Make APK from Angular Output
+> apkjs cc      # Clear Angular cache
 > npm run apk
