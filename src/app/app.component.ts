@@ -12,6 +12,8 @@ const Android: any = (<any>window).Android;
 
 export class AppComponent {
 
+  appVersion: string = "1.1";
+
   lang: string;
   config: AppConfig;
   lists: Record<string, string[]>

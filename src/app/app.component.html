@@ -52,7 +52,7 @@
     </mat-list-option>
   </mat-selection-list>
 
-  <app-config *ngIf="view=='Configuration'" [config]="config" (valueChange)="updateConfig($event)"
-    (SetTheme_)="SetTheme($event)">
+  <app-config *ngIf="view=='Configuration'" [appVersion]="appVersion" [config]="config"
+    (valueChange)="updateConfig($event)" (SetTheme_)="SetTheme($event)">
   </app-config>
 </div>

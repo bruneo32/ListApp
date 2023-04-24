@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AppConfig, defaultAppConfig } from 'src/app/models/AppConfig';
 
+
 @Component({
   selector: 'app-config',
   templateUrl: './config.component.html',
@@ -8,9 +9,12 @@ import { AppConfig, defaultAppConfig } from 'src/app/models/AppConfig';
 })
 export class ConfigComponent implements OnInit {
 
+  @Input() appVersion: string = "-";
   @Input() config: AppConfig;
   @Output() valueChange = new EventEmitter<AppConfig>();
   @Output() SetTheme_ = new EventEmitter<string>();
+
+  ReleasesURL: string = "https://github.com/bruneo32/ListApp/releases";
 
   constructor() {
     this.config = defaultAppConfig;
@@ -32,4 +36,5 @@ export class ConfigComponent implements OnInit {
   SetTheme(themename: string) {
     this.SetTheme_.emit(themename);
   }
+
 }

@@ -74,6 +74,13 @@
 <br>
 <hr><br>
 
+<h2>Check for updates</h2>
+<p>Current version: <b style="font-family:monospace;">v{{ appVersion }}</b></p>
+<a [href]="ReleasesURL" target="_blank">{{ ReleasesURL }}</a>
+
+<br>
+<hr><br>
+
 <h2>Erase all data</h2>
 <p>This will destroy your data and all your lists.</p>
 <button mat-raised-button style="margin:auto;" (click)="resetData()">Reset data</button>

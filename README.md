@@ -2,13 +2,13 @@
 Fancy Android Application to easily create Lists
 
 # Change Log
-> Version 1.1
-- Go Back button doesn't close the application
-- Themes implementation
+> Version 1.2
+- Check for updates field
 
 # Building
 Build Angular App
 > npm run build
 
 Make APK from Angular Output
+> apkjs cc      # Clear Angular cache
 > npm run apk
