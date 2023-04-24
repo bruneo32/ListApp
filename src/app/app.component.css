@@ -1,0 +1,28 @@
+#header img {
+	height: 32px;
+	margin-right: 12px;
+	margin-left: 0;
+}
+
+#header .material-icon {
+	margin-left: 16px;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#content {
+	box-sizing: border-box;
+	overflow: auto;
+	margin-top: 56px;
+	height: calc(100vh - 56px);
+}
+
+app-config {
+	display: block;
+	padding: 16px;
+}

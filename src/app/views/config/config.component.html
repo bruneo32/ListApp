@@ -1,0 +1,79 @@
+<mat-checkbox [(ngModel)]="config.openLastView" (ngModelChange)="update()">Restore last opened list view</mat-checkbox>
+
+<br><br>
+<hr><br>
+
+<h2>How to use</h2>
+<p>&#x204D; Touch for toggle the list item</p>
+<p>&#x204D; Long-touch for deleting it</p>
+
+<mat-selection-list>
+	<mat-list-option oncontextmenu="this.style.visibility='hidden';return false;">
+		Test item
+	</mat-list-option>
+</mat-selection-list>
+
+<br>
+<hr><br>
+
+<h2>Choose Theme</h2>
+<div class="themeSelector dark">
+	<div class="theme" style="background:#303030; color:#FFF;" title="Purple Green" (click)="SetTheme('theme-default')">
+		<div class="upbar" style="background:#7b1fa2;"></div>
+		<div>
+			<span>Abc</span>&nbsp;
+			<mat-pseudo-checkbox style="background-color:#69f0ae; color:#303030;"
+				class="mat-pseudo-checkbox mat-pseudo-checkbox-checked"></mat-pseudo-checkbox>
+		</div>
+	</div>
+	<div class="theme" style="background:#303030; color:#FFF;" title="Pink Bluegrey" (click)="SetTheme('theme-pinkbg')">
+		<div class="upbar" style="background:#c2185b;"></div>
+		<div>
+			<span>Abc</span>&nbsp;
+			<mat-pseudo-checkbox style="background-color:#b0bec5; color:#303030;"
+				class="mat-pseudo-checkbox mat-pseudo-checkbox-checked"></mat-pseudo-checkbox>
+		</div>
+	</div>
+	<div class="theme" style="background:#fafafa; color:#000;" title="Indigo Pink" (click)="SetTheme('theme-indigop')">
+		<div class="upbar" style="background:#3f51b5;"></div>
+		<div>
+			<span>Abc</span>&nbsp;
+			<mat-pseudo-checkbox style="background-color:#ff4081; color:#fafafa;"
+				class="mat-pseudo-checkbox mat-pseudo-checkbox-checked"></mat-pseudo-checkbox>
+		</div>
+	</div>
+	<div class="theme" style="background:#fafafa; color:#000;" title="DeepPurple Amber"
+		(click)="SetTheme('theme-dpamber')">
+		<div class="upbar" style="background:#673ab7;"></div>
+		<div>
+			<span>Abc</span>&nbsp;
+			<mat-pseudo-checkbox style="background-color:#ffd740; color:#fafafa;"
+				class="mat-pseudo-checkbox mat-pseudo-checkbox-checked"></mat-pseudo-checkbox>
+		</div>
+	</div>
+	<div class="theme" style="background:#303030; color:#FFF;" title="Unicorn Dark Theme"
+		(click)="SetTheme('theme-unicorn')">
+		<div class="upbar" style="background:#607d8d;"></div>
+		<div>
+			<span>Abc</span>&nbsp;
+			<mat-pseudo-checkbox style="background-color:#ffd740; color:#303030;"
+				class="mat-pseudo-checkbox mat-pseudo-checkbox-checked"></mat-pseudo-checkbox>
+		</div>
+	</div>
+	<div class="theme" style="background:#ffdbff; color:#000;" title="BlackPink Theme"
+		(click)="SetTheme('theme-blackpink')">
+		<div class="upbar" style="background:#ff64ff;"></div>
+		<div>
+			<span>Abc</span>&nbsp;
+			<mat-pseudo-checkbox style="background-color:#77d942; color:#fafafa;"
+				class="mat-pseudo-checkbox mat-pseudo-checkbox-checked"></mat-pseudo-checkbox>
+		</div>
+	</div>
+</div>
+
+<br>
+<hr><br>
+
+<h2>Erase all data</h2>
+<p>This will destroy your data and all your lists.</p>
+<button mat-raised-button style="margin:auto;" (click)="resetData()">Reset data</button>
